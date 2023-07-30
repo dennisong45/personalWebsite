@@ -55,7 +55,7 @@ export default function Home() {
                   className="max-w-full h-auto"
                 />
                 <h1 className="pt-3 font-body text-4xl font-semibold text-primary dark:text-white md:text-5xl lg:text-6xl">
-                  Hi, I'm Dennis.
+                  Hi, I`&apos`m Dennis.
                 </h1>
                 <p className="pt-3 font-body text-xl font-light text-primary dark:text-white">
                   A software engineer that loves to build stuff with his
