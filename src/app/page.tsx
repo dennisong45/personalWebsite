@@ -1,12 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import "./css/styles.css";
+import Head from 'next/head'
+import { Metadata } from 'next'
+export const metadata: Metadata = {
+  title: 'Dennis Weng Han Ong',
+  description: 'Dennis is a Software Engineer specializing in full-stack web development. He has experience with technologies like Java, Vert.x m JavaScript, React, Node.js, etc.',
+  keywords: 'Software Engineer, Full Stack Developer, Back-end, Java, JavaScript, React, Node.js"'
+}
 
 export default function Home() {
 
-
   return (
     <div className="flex flex-col min-h-screen">
+      
       <main className="flex-grow p-4">
         <div className="container mx-auto">
           <div className="flex items-center justify-between py-6 lg:py-10">
@@ -23,17 +30,28 @@ export default function Home() {
             </div>
             <div className="hidden lg:block">
               <ul className="flex items-center">
-                {["/resume", "/uses", "/contact"].map((path, index) => (
-                  <li key={index} className="group relative mr-6 mb-1">
+
+                  <li className="group relative mr-6 mb-1">
                     <div className="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow" />
                     <Link
-                      href={path}
+                      href={"/"}
                       className="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
                     >
-                      {path.replace("/", "") || "Intro"}
                     </Link>
                   </li>
-                ))}
+
+                  <li className="group relative mr-6 mb-1">
+                    <div className="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow" />
+                    <a
+                      href={"/dennis_ong.pdf"}
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
+                    >
+                      Resume
+                    </a>
+                  </li>
+
                 <li>
                   <i
                     className={`bx cursor-pointer text-3xl text-primary dark:text-white `}
@@ -55,7 +73,7 @@ export default function Home() {
                   className="max-w-full h-auto"
                 />
                 <h1 className="pt-3 font-body text-4xl font-semibold text-primary dark:text-white md:text-5xl lg:text-6xl">
-                  Hi, I`&apos`m Dennis.
+                  Hi, I&apos;m Dennis.
                 </h1>
                 <p className="pt-3 font-body text-xl font-light text-primary dark:text-white">
                   A software engineer that loves to build stuff with his
@@ -103,7 +121,7 @@ export default function Home() {
               difficult to scale. Refactored the code-base and migrated the
               application to Vert.x, which provided a more lightweight,
               reactive, and event-driven architecture.<br/><br/>
-              ◦ Technologies Used: Java , Spring-boot, Vert.x, Couchbase, AWS,
+              ◦ Technologies Used: Java , Javascript,  Spring-boot, Vert.x, Couchbase, AWS,
               GitHub , React, Jenkins, Openshift, Kubernetes, Dockers, Liquid
               Jekyll, Node.js, Github-Actions
               </p>
